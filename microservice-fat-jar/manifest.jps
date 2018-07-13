@@ -5,7 +5,7 @@ id: vertx-fat-jar
 name: Vert.x Fat Jar Microservice
 baseUrl: https://raw.githubusercontent.com/jelastic-jps/vertx/master
 logo: /images/vertx-logo.png
-homepage: https://github.com/jelastic-jps/vertx
+homepage: https://github.com/jelastic-jps/vertx/tree/master/microservice-fat-jar
 description: /text/description-fat-jar.md 
 
 globals:
