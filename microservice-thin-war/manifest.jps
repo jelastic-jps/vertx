@@ -1,0 +1,77 @@
+---
+type: install
+version: 1.4
+id: vertx-thin-war
+name: Vert.x Thin War Microservice
+baseUrl: https://raw.githubusercontent.com/jelastic-jps/vertx/master
+logo: /images/vertx-logo.png
+homepage: https://github.com/jelastic-jps/vertx/tree/master/microservice-thin-war
+description: /text/description-vertx-war.md 
+
+globals:
+  projectName: myapp
+  deployDir: /deployments
+
+settings:
+  fields:
+    - type: string
+      caption: Git Repo
+      name: gitUrl
+      default: https://github.com/siruslan/java-packaging-demo.git
+      required: true
+      
+    - type: string
+      caption: Work Directory
+      name: workDir
+      default: vertx-thin
+ 
+ssl: true  
+
+nodes:
+- count: 1
+  cloudlets: 16
+  nodeGroup: build
+  nodeType: maven
+
+- count: 1
+  image: vertx/vertx3-exec
+  cloudlets: 16
+  nodeGroup: cp
+  env:
+    JELASTIC_EXPOSE: 8080
+    VERTICLE_NAME: com.example.demo.App
+    VERTICLE_HOME: ${globals.deployDir}
+  cmd: run $VERTICLE_NAME -cp $VERTICLE_HOME/*
+  volumes:
+  - ${globals.deployDir}
+  volumeMounts:
+    ${globals.deployDir}:
+      sourcePath: ${globals.deployDir}
+      sourceNodeGroup: build
+      readOnly: true
+    
+onInstall:
+  - addBuildProject
+  - buildProject
+
+onAfterBuildProject[project:${globals.projectName}]: restartContainers[cp]
+
+actions:
+  addBuildProject:     
+    - api: env.deployment.AddBuildProject
+      name: ${globals.projectName}
+      nodeId: ${nodes.build.first.id}
+      repo: ${settings.gitUrl}
+      settings:
+        workDir: ${settings.workDir}
+      hooks: | 
+          {"postBuild":"cd /var/lib/jelastic/PROJECTS/${globals.projectName}/${settings.workDir}/target; cp $(ls | grep *.jar | head -n 1) ${globals.deployDir}/ms.jar 2>/dev/null || :; cp $(ls | grep *.war | head -n 1) ${globals.deployDir}/app.war 2>/dev/null || :; cp -R thin ${globals.deployDir}/ 2>/dev/null || :"}
+
+  buildProject:
+    api: env.deployment.BuildProject
+    nodeId: ${nodes.build.first.id}
+    project: ${globals.projectName}
+    skipUpload: true   
+
+success: /text/success-thin-war.md
+startPage: api/greeting      
