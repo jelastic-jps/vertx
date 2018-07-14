@@ -6,7 +6,7 @@ name: Vert.x Thin War Microservice
 baseUrl: https://raw.githubusercontent.com/jelastic-jps/vertx/master
 logo: /images/vertx-logo.png
 homepage: https://github.com/jelastic-jps/vertx/tree/master/microservice-thin-war
-description: /text/description-vertx-war.md 
+description: /text/description-thin-war.md 
 
 globals:
   projectName: myapp
