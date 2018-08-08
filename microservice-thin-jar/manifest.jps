@@ -8,6 +8,11 @@ logo: /images/vertx-logo.png
 homepage: https://github.com/jelastic-jps/vertx/tree/master/microservice-thin-jar
 description: /text/description-thin-jar.md 
 
+categories:
+  - apps/dev-and-admin-tools
+  - apps/others
+  - apps/microservices
+
 globals:
   projectName: myapp
   deployDir: /deployments
