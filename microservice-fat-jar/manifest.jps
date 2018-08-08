@@ -8,6 +8,11 @@ logo: /images/vertx-logo.png
 homepage: https://github.com/jelastic-jps/vertx/tree/master/microservice-fat-jar
 description: /text/description-fat-jar.md 
 
+categories:
+  - apps/dev-and-admin-tools
+  - apps/microservices
+  - apps/others
+
 globals:
   projectName: myapp
   
