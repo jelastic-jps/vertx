@@ -1,12 +1,12 @@
 ---
 type: install
 version: 1.4
-id: vertx-thin-war
-name: Vert.x Thin War Microservice
+id: vertx-thin-jar
+name: Vert.x Thin Jar Microservice
 baseUrl: https://raw.githubusercontent.com/jelastic-jps/vertx/master
 logo: /images/vertx-logo.png
-homepage: https://github.com/jelastic-jps/vertx/tree/master/microservice-thin-war
-description: /text/description-thin-war.md 
+homepage: https://github.com/jelastic-jps/vertx/tree/master/microservice-thin-jar
+description: /text/description-thin-jar.md 
 
 globals:
   projectName: myapp
@@ -73,5 +73,5 @@ actions:
     project: ${globals.projectName}
     skipUpload: true   
 
-success: /text/success-thin-war.md
+success: /text/success-thin-jar.md
 startPage: api/greeting      
