@@ -10,7 +10,7 @@ description: /text/description-thin-jar.md
 
 categories:
   - apps/dev-and-admin-tools
-  - apps/others
+  - apps/other
   - apps/microservices
 
 globals:
