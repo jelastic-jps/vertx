@@ -1,1 +1,1 @@
-Example of Microservice based on Vert.x Fat Jar. The package creates Maven node, builds the source code and automatically deploys to Java Engine node.
+This package consists of Maven and Vert.x tool-kit inside Java Engine node. It automates building a sample Java project as Fat (or so-called Uber) Jar to run it as a microservice.

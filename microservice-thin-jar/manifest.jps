@@ -2,7 +2,7 @@
 type: install
 version: 1.4
 id: vertx-thin-jar
-name: Vert.x Thin Jar Microservice
+name: Vert.x Thin Jar Builder
 baseUrl: https://raw.githubusercontent.com/jelastic-jps/vertx/master
 logo: /images/vertx-logo.png
 homepage: https://github.com/jelastic-jps/vertx/tree/master/microservice-thin-jar
