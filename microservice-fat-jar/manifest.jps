@@ -6,7 +6,9 @@ name: Vert.x Fat Jar Microservice
 baseUrl: https://raw.githubusercontent.com/jelastic-jps/vertx/master
 logo: /images/vertx-logo.png
 homepage: https://github.com/jelastic-jps/vertx/tree/master/microservice-fat-jar
-description: /text/description-fat-jar.md 
+description: 
+  text: /text/description-fat-jar.md 
+  short: Example of Microservice based on Vert.x Fat Jar
 
 categories:
   - apps/dev-and-admin-tools
