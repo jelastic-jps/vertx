@@ -6,7 +6,9 @@ name: Vert.x Thin Jar Microservice
 baseUrl: https://raw.githubusercontent.com/jelastic-jps/vertx/master
 logo: /images/vertx-logo.png
 homepage: https://github.com/jelastic-jps/vertx/tree/master/microservice-thin-jar
-description: /text/description-thin-jar.md 
+description: 
+  text: /text/description-thin-jar.md 
+  short: Example of Microservice based on Vert.x Thin Jar
 
 categories:
   - apps/dev-and-admin-tools
