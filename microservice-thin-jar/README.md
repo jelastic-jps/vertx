@@ -7,7 +7,7 @@ Import the required manifest using the link from GitHub:
 <img src="../images/import-thin.png" width="500">
 </p>
 
-If required, change installation settings such as environment name or Git repository link to a custom Vert.x Fat project. Then press *Install*.
+If required, change installation settings such as environment name or Git repository link to a custom Vert.x Thin project. Then press *Install*.
 
 <p align="left"> 
 <img src="../images/install-thin.png" width="500">
