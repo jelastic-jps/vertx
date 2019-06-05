@@ -1,8 +1,7 @@
----
 type: install
 version: 1.4
 id: vertx-fat-jar
-name: Vert.x Fat Jar Builder
+name: Eclipse Vert.x Fat Jar Builder
 baseUrl: https://raw.githubusercontent.com/jelastic-jps/vertx/master
 logo: /images/vertx-logo.png
 homepage: https://github.com/jelastic-jps/vertx/tree/master/microservice-fat-jar
@@ -33,13 +32,11 @@ settings:
 ssl: true  
    
 nodes:
-- count: 1
-  cloudlets: 16
+- cloudlets: 16
   nodeGroup: build
   nodeType: maven
   
-- count: 1
-  cloudlets: 8
+- cloudlets: 8
   nodeGroup: cp
   nodeType: javaengine
   restartDelay: 15
@@ -68,4 +65,4 @@ actions:
     skipUpload: true
       
 success: /text/success-fat-jar.md
-startPage: api/greeting      
+startPage: api/greeting
