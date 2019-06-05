@@ -1,8 +1,7 @@
----
 type: install
 version: 1.4
 id: vertx-thin-jar
-name: Vert.x Thin Jar Builder
+name: Eclipse Vert.x Thin Jar Builder
 baseUrl: https://raw.githubusercontent.com/jelastic-jps/vertx/master
 logo: /images/vertx-logo.png
 homepage: https://github.com/jelastic-jps/vertx/tree/master/microservice-thin-jar
@@ -34,13 +33,11 @@ settings:
 ssl: true  
 
 nodes:
-- count: 1
-  cloudlets: 16
+- cloudlets: 16
   nodeGroup: build
   nodeType: maven
 
-- count: 1
-  image: vertx/vertx3-exec
+- image: vertx/vertx3-exec
   cloudlets: 16
   nodeGroup: cp
   env:
@@ -80,4 +77,4 @@ actions:
     skipUpload: true   
 
 success: /text/success-thin-jar.md
-startPage: api/greeting      
+startPage: api/greeting
