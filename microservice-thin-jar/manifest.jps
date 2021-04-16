@@ -56,6 +56,7 @@ nodes:
 onInstall:
   - addBuildProject
   - buildProject
+  - restartContainers[cp]
 
 onAfterBuildProject[project:${globals.projectName}]: restartContainers[cp]
 
@@ -75,6 +76,7 @@ actions:
     nodeId: ${nodes.build.first.id}
     project: ${globals.projectName}
     skipUpload: true   
+    async: false
 
 success: /text/success-thin-jar.md
 startPage: api/greeting
