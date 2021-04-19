@@ -35,10 +35,12 @@ nodes:
 - cloudlets: 16
   nodeGroup: build
   nodeType: maven
+  engine: openjdk8
   
 - cloudlets: 8
   nodeGroup: cp
   nodeType: javaengine
+  engine: openjdk8
   restartDelay: 15
       
 onInstall:
